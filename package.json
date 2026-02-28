@@ -1,6 +1,7 @@
 {
 	"devDependencies": {
 		"@biomejs/biome": "2.4.4",
+		"@infisical/cli": "0.43.40",
 		"@types/node": "25.3.2",
 		"tsx": "4.21.0"
 	},
@@ -8,6 +9,7 @@
 	"packageManager": "pnpm@10.18.1",
 	"private": true,
 	"scripts": {
+		"authenticate": "infisical login",
 		"build": "pnpm -r --filter './apps/*' build",
 		"dev": "pnpm -r --filter './apps/*' --parallel dev",
 		"format": "biome check --write .",
