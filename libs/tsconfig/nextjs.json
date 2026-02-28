@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"incremental": true,
+		"isolatedModules": true,
+		"jsx": "react-jsx",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"noEmit": true,
+		"plugins": [{ "name": "next" }],
+		"resolveJsonModule": true
+	},
+	"extends": "./base.json"
+}

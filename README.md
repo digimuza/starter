@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <strong>pnpm workspaces</strong> &nbsp;&bull;&nbsp; <strong>Biome</strong> &nbsp;&bull;&nbsp; <strong>TypeScript</strong>
+  <strong>pnpm workspaces</strong> &bull; <strong>Biome</strong> &bull; <strong>TypeScript</strong> &bull; <strong>Vitest</strong>
 </p>
 
 ---
@@ -12,16 +12,22 @@
 ## Structure
 
 ```
-├── apps/          # Deployable applications
-├── libs/          # Shared libraries and packages
-├── biome.json     # Linting, formatting & import sorting
-└── package.json   # Root scripts and shared dev dependencies
+├── apps/
+│   └── web/               # Next.js 15 application
+├── libs/
+│   ├── shared/            # Shared utility library
+│   └── tsconfig/          # Shared TypeScript configurations
+├── roadmap/               # Project roadmap
+├── biome.json             # Linting, formatting & import sorting
+├── vitest.config.ts       # Root test configuration
+└── package.json           # Root scripts and shared dev dependencies
 ```
 
-| Directory | Purpose |
-|-----------|---------|
-| `apps/*`  | Each sub-folder is a standalone, deployable application |
-| `libs/*`  | Shared code consumed by apps (utilities, configs, UI kits, etc.) |
+| Directory          | Purpose                                          |
+| ------------------ | ------------------------------------------------ |
+| `apps/web`         | Next.js 15 app with App Router                   |
+| `libs/shared`      | Shared utilities consumed by apps                |
+| `libs/tsconfig`    | Shared TypeScript configs (base, lib, Next.js)   |
 
 ## Getting Started
 
@@ -61,6 +67,12 @@ pnpm format       # Auto-fix and format
 pnpm typecheck    # Run tsc --noEmit across all packages
 ```
 
+### Test
+
+```bash
+pnpm test         # Run all tests
+```
+
 ## Adding a New App
 
 ```bash
@@ -98,6 +110,10 @@ Key config choices:
 - **Cognitive complexity** capped at 25
 
 VS Code will auto-format on save with the included `.vscode/settings.json`.
+
+### Vitest
+
+Testing is configured with [Vitest](https://vitest.dev/). Each testable package has its own `vitest.config.ts` that extends the root config.
 
 ## License
 

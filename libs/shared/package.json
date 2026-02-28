@@ -1,0 +1,15 @@
+{
+	"devDependencies": {
+		"@starter/tsconfig": "workspace:*"
+	},
+	"exports": {
+		".": {
+			"default": "./src/index.ts",
+			"types": "./src/index.ts"
+		}
+	},
+	"name": "@starter/shared",
+	"private": true,
+	"type": "module",
+	"version": "0.1.0"
+}

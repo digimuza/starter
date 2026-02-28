@@ -3,7 +3,9 @@
 		"@biomejs/biome": "2.4.4",
 		"@infisical/cli": "0.43.40",
 		"@types/node": "25.3.2",
-		"tsx": "4.21.0"
+		"tsx": "4.21.0",
+		"typescript": "5.8.3",
+		"vitest": "3.2.4"
 	},
 	"name": "starter",
 	"packageManager": "pnpm@10.18.1",
@@ -14,7 +16,8 @@
 		"dev": "pnpm -r --filter './apps/*' --parallel dev",
 		"format": "biome check --write .",
 		"lint": "biome check .",
-		"typecheck": "pnpm -r exec tsc --noEmit"
+		"test": "vitest run",
+		"typecheck": "pnpm -r --filter '!@starter/tsconfig' exec tsc --noEmit"
 	},
 	"version": "0.0.0"
 }

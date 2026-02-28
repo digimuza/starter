@@ -1,0 +1,22 @@
+{
+	"dependencies": {
+		"@starter/shared": "workspace:*",
+		"next": "^15.3.3",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0"
+	},
+	"devDependencies": {
+		"@starter/tsconfig": "workspace:*",
+		"@types/react": "^19.1.8",
+		"@types/react-dom": "^19.1.6"
+	},
+	"name": "web",
+	"private": true,
+	"scripts": {
+		"build": "next build",
+		"dev": "next dev --turbopack",
+		"start": "next start"
+	},
+	"type": "module",
+	"version": "0.1.0"
+}
